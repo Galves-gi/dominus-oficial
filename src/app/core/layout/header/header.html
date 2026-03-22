@@ -1,0 +1,79 @@
+<header>
+    <div class="header__container">
+        <!-- logo -->
+        <a routerLink="/" aria-label="Ir para a página inicial da Dominus Cafés">
+            <img src="logo.svg" alt="Logo Dominus Cafés" width="120" height="40">
+        </a>
+
+
+        <!-- links -->
+        <nav aria-label="Navegação principal">
+
+            <!-- Links principais -->
+            <ul class="links__navegar" [class.menu-open]="openMenu">
+
+                <li>
+                    <a href="#catalogo">
+
+                        <img src="/icones/icone-header-xicara.svg" alt="" aria-hidden="true">
+
+                        <span>Catálogo</span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/sobre">
+
+                        <img src="/icones/icone-header-caneta.svg" alt="" aria-hidden="true">
+
+                        <span>Sobre nós</span>
+
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Redes sociais -->
+            <ul class="redes__sociais" aria-label="Redes sociais da Dominus Cafés">
+
+                <li>
+                    <a href="https://www.youtube.com/@dominuscafes7222" target="_blank" rel="noopener noreferrer"
+                        aria-label="Canal da Dominus Cafés no YouTube (abre em nova aba)">
+
+                        <img src="/icones/icone-yt.svg" alt="ícone you tube" aria-hidden="true">
+
+                        <span>Dominus Cafés</span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/dominuscafes/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Perfil da Dominus Cafés no Instagram (abre em nova aba)">
+
+                        <img src="/icones/icone-inst.svg" alt="ícone instagram" aria-hidden="true">
+
+                        <span>@dominuscafes</span>
+
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Botão mobile -->
+            <button type="button" class="botao_menu icone_menu" (click)="menu()" [class.menu-fechar]="openMenu"
+                [class.menu-abrir]="!openMenu" aria-label="Abrir menu de navegação" [attr.aria-expanded]="openMenu"
+                aria-controls="menu-principal">
+
+                <span class="bar" id="bar1"></span>
+                <span class="bar" id="bar2"></span>
+                <span class="bar" id="bar3"></span>
+
+            </button>
+
+        </nav>
+    </div>
+
+
+</header>

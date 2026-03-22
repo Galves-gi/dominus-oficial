@@ -1,0 +1,12 @@
+<app-banner></app-banner>
+
+<h2 class="cor-texto-azul fonte-Poppins fonte-bold margem-top-bottom texto-centro">Conheça Nosso Catálogo de <br><span
+        class="cor-texto-bege">Cafés Especiais:</span></h2>
+
+<section class="container__cards-produtos" id="catalogo">
+    @for (produto of dataProduct; track produto.id) {
+
+    <app-card-product-home [product]="produto"></app-card-product-home>
+
+    }
+</section>

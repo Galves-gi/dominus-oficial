@@ -1,0 +1,87 @@
+/* ===== Reset básico ===== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== body e html ===== */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Imagens e mídia ===== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* ===== Inputs ===== */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    background: none;
+    -webkit-tap-highlight-color: transparent;
+    /* Android, iOS Safari */
+    /* tap-highlight-color: transparent; */
+    /* fallback (não padrão) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* ===== Links ===== */
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ===== Listas ===== */
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* ===== Títulos ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+}
+
+/* ===== Tabelas ===== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

@@ -1,0 +1,151 @@
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--cor-azul);
+    padding: calc(10px + 2em) calc(10px + 2vw);
+    position: relative;
+    color: var(--cor-branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.marketing,
+.contatos,
+.avaliacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Títulos */
+footer h3 {
+    color: var(--cor-bege);
+    font-family: var(--fonte-Poppins);
+    font-weight: var(--fonte-bold);
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Texto bege */
+footer h4 span,
+footer a span,
+p span {
+    color: var(--cor-bege);
+}
+
+/* ordem mobile */
+.marketing {
+    order: 1;
+}
+
+.avaliacao {
+    order: 2;
+}
+
+.contatos {
+    order: 3;
+}
+
+.tipos__pagamentos {
+    order: 4;
+}
+
+/* MArketing */
+
+.marketing h4,
+.marketing p,
+.marketing p span {
+    font-family: var(--fonte-Raleway);
+    font-weight: var(--fonte-normal);
+    font-size: 13px;
+}
+
+.marketing p span {
+    font-weight: var(--fonte-bold);
+}
+
+/* Contatos */
+.contatos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3em;
+
+    font-family: var(--fonte-Poppins);
+    font-weight: var(--fonte-normal);
+    font-size: 13px;
+}
+
+.contatos a span {
+    font-weight: var(--fonte-bold);
+}
+
+.contatos a img {
+    display: inline-block;
+}
+
+.avaliacao a {
+    width: 284px;
+    padding: 14px 23px;
+    background-color: var(--cor-bege);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--cor-branco);
+    font-family: var(--fonte-Satisfy);
+    font-weight: var(--fonte-normal);
+    font-size: 16px;
+    text-decoration: underline var(--cor-branco);
+}
+
+/* Ícones de pagamentos */
+.tipos__pagamentos ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.tipos__pagamentos ul li {
+    display: inline-block;
+}
+
+/* Faixa autoral */
+footer small {
+    width: 100%;
+    padding: 1em;
+    position: absolute;
+    bottom: -3em;
+    left: 0;
+    text-align: center;
+    color: var(--cor-branco);
+    font-family: var(--fonte-Poppins);
+    font-weight: var(--fonte-medio);
+    font-size: 10px;
+    background-color: var(--cor-bege);
+}
+
+/* DESKTOP */
+@media (min-width:720px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(200px, 270px));
+        justify-items: center;
+        align-items: center;
+        padding: 60px clamp(60px, 10vw, 140px);
+        gap: 60px clamp(60px, 12vw, 180px);
+    }
+
+    .marketing h4,
+    .contatos a {
+        font-size: 13px;
+    }
+
+}

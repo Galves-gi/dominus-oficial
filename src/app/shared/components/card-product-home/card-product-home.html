@@ -1,0 +1,50 @@
+<article class="card-produto" aria-labelledby="ARIA-titulo">
+    <div>
+        <!-- imagem -->
+        <figure>
+            <img [src]="product()?.image" [alt]="product()?.title">
+        </figure>
+
+        <!-- texto -->
+        <div class="container__texto">
+
+            <!-- Título -->
+            <h3 id="ARIA-titulo">
+                {{ product()?.title }}
+
+                <!-- Destaque título -->
+                <span class="destaque">
+                    {{ product()?.title_highlight }}
+                </span><br>
+
+                {{ product()?.type }}
+            </h3>
+
+            <!-- Peso / Especificação -->
+            <h4 class="cor-texto-bege">
+                {{ product()?.specification }}
+            </h4>
+
+            <!-- Descrição -->
+            <p>
+                {{ product()?.description }}
+
+                <!-- Destaque Descrição -->
+                <span>
+                    {{ product()?.description_highlight }}
+                </span>
+
+            </p>
+        </div>
+    </div>
+
+    <!-- BOTÃO COMPRAR -->
+    <a [href]="link()" target="_blank" class="botao__comprar" aria-label="Comprar café Arara 500g pelo WhatsApp">
+        <img src="/icones/zap-card-produto.svg" alt="ícone do WhatsApp" aria-hidden="true">
+
+        <span>COMPRAR AGORA</span>
+
+        <img src="/icones/seta-card-produto.svg" alt="ícone de seta apontada para o lado direto" aria-hidden="true">
+    </a>
+
+</article>

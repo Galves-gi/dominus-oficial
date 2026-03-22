@@ -1,0 +1,344 @@
+/* =======================
+   HEADER
+======================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.header__container {
+    background: var(--cor-branco);
+    width: 100%;
+
+    height: clamp(70px, 12vw, 90px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 clamp(12px, 4vw, 24px);
+
+    margin: 0 auto;
+
+    border-bottom: clamp(6px, 1.5vw, 10px) solid var(--cor-bege);
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    z-index: 200;
+}
+
+/* =======================
+   LOGO
+======================= */
+
+header .header__container a img {
+    display: block;
+    height: clamp(42px, 8vw, 66px);
+}
+
+/* =======================
+   NAV
+======================= */
+
+header .header__container nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 3vw, 24px);
+}
+
+/* =======================
+   BOTÃO MENU
+======================= */
+
+.botao_menu {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    position: relative;
+}
+
+.icone_menu {
+    width: clamp(24px, 6vw, 32px);
+    height: clamp(24px, 6vw, 32px);
+}
+
+.icone_menu>.bar {
+    width: 0.8em;
+    height: 0.1em;
+    border-radius: 100px;
+    background-color: var(--cor-azul);
+    position: absolute;
+    right: 0%;
+    top: 42%;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* estado X */
+.menu-fechar #bar1 {
+    transform: rotate(45deg);
+}
+
+.menu-fechar #bar3 {
+    transform: rotate(-45deg);
+}
+
+.menu-fechar #bar2 {
+    opacity: 0;
+}
+
+/* estado hamburguer */
+.menu-abrir #bar1 {
+    transform: translateY(0.2em);
+}
+
+.menu-abrir #bar2 {
+    transform: translateY(-.05em);
+}
+
+.menu-abrir #bar3 {
+    transform: translateY(-0.3em);
+}
+
+/* =======================
+   MENU MOBILE
+======================= */
+
+.links__navegar {
+    position: absolute;
+    top: clamp(70px, 12vw, 90px);
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: clamp(10px, 3vw, 16px);
+
+    padding: clamp(12px, 3vw, 16px);
+
+    background: var(--cor-azul);
+
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(-10px);
+
+    transition:
+        max-height .35s ease,
+        opacity .25s ease,
+        transform .35s ease;
+}
+
+.links__navegar.menu-open {
+    max-height: 320px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =======================
+   LINKS
+======================= */
+.links__navegar li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.links__navegar li a {
+    width: 100%;
+    max-width: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(8px, 2vw, 12px);
+
+    padding: clamp(10px, 2.5vw, 14px);
+
+    background: var(--cor-bege);
+
+    border-radius: 6px;
+
+    color: var(--cor-branco);
+
+    font-family: var(--fonte-Poppins);
+    font-weight: var(--fonte-bold);
+
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+}
+
+.links__navegar li a img {
+    height: clamp(14px, 3vw, 17px);
+}
+
+.links__navegar li a span {
+    font-size: clamp(14px, 3.5vw, 16px);
+}
+
+/* =======================
+   REDES SOCIAIS
+======================= */
+
+.redes__sociais {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 3vw, 16px);
+}
+
+.redes__sociais li a {
+    display: flex;
+    align-items: center;
+}
+
+.redes__sociais li a img {
+    width: clamp(20px, 5vw, 28px);
+}
+
+.redes__sociais li a span {
+    display: none;
+    color: var(--cor-azul);
+    font-family: var(--fonte-Raleway);
+    font-weight: var(--fonte-bold);
+}
+
+/* =======================
+   720px → 1440px (FLUIDO)
+======================= */
+
+@media (min-width: 720px) {
+
+    /* Header continua full width */
+    header {
+        width: 100%;
+        background: var(--cor-branco);
+
+        display: flex;
+        justify-content: center;
+        border-bottom: clamp(6px, 1.5vw, 10px) solid var(--cor-bege);
+    }
+
+    /* Conteúdo travado no centro */
+    .header__container {
+        width: 100%;
+        max-width: 1440px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: clamp(86.3px, 10vw, 158px);
+
+        padding: 0 clamp(16px, 4vw, 40px);
+        border: none;
+    }
+
+    /* =======================
+       LOGO
+    ======================= */
+
+    header a img {
+        width: clamp(120px, 10vw, 180px);
+        height: clamp(57.5px, 6vw, 100px);
+    }
+
+    /* =======================
+       NAV
+    ======================= */
+
+    header nav {
+        width: clamp(55%, 60vw, 70%);
+        justify-content: flex-end;
+
+        gap: clamp(16px, 3vw, 48px);
+    }
+
+    /* botão some */
+    header nav button {
+        display: none;
+    }
+
+    /* =======================
+       MENU
+    ======================= */
+
+    .links__navegar {
+        width: auto;
+        position: static;
+
+        max-height: none;
+        opacity: 1;
+        transform: none;
+
+        background: none;
+
+        flex-direction: row;
+
+        padding: 0;
+
+        gap: clamp(12px, 2vw, 32px);
+    }
+
+    .links__navegar li {
+        width: auto;
+    }
+
+    .links__navegar li a {
+        background: none;
+        color: var(--cor-azul);
+
+        width: auto;
+        padding: 0;
+
+        font-size: clamp(14px, 1.2vw, 16px);
+    }
+
+    .links__navegar li a span:hover {
+        color: var(--cor-bege);
+        text-decoration: underline var(--cor-bege);
+    }
+
+    .links__navegar li a img {
+        display: none;
+    }
+
+    /* =======================
+       REDES SOCIAIS
+    ======================= */
+
+    .redes__sociais {
+        gap: clamp(10px, 2vw, 24px);
+    }
+
+    .redes__sociais li a {
+        gap: clamp(6px, 1vw, 10px);
+    }
+
+    .redes__sociais li a img {
+        width: clamp(20px, 2vw, 28px);
+    }
+
+    .redes__sociais li a span {
+        display: flex;
+        white-space: nowrap;
+
+        font-size: clamp(13px, 1.1vw, 16px);
+    }
+}
+
+/* =======================
+   TABLET
+======================= */
+
+@media (min-width:720px) and (max-width:983px) {
+
+    .redes__sociais li a span {
+        display: none;
+    }
+}
