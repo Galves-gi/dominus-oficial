@@ -5,6 +5,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 200;
+    box-shadow: 0 4px 20px #333333;
+
 }
 
 .header__container {
@@ -227,7 +229,7 @@ header .header__container nav {
     /* Conteúdo travado no centro */
     .header__container {
         width: 100%;
-        max-width: 1440px;
+        max-width: 1010px;
 
         display: flex;
         align-items: center;
@@ -243,7 +245,7 @@ header .header__container nav {
        LOGO
     ======================= */
 
-    header a img {
+    header .header__container a img {
         width: clamp(120px, 10vw, 180px);
         height: clamp(57.5px, 6vw, 100px);
     }
@@ -252,11 +254,11 @@ header .header__container nav {
        NAV
     ======================= */
 
-    header nav {
+    header .header__container nav {
         width: clamp(55%, 60vw, 70%);
         justify-content: flex-end;
 
-        gap: clamp(16px, 3vw, 48px);
+        gap: clamp(16px, 6vw, 90px);
     }
 
     /* botão some */

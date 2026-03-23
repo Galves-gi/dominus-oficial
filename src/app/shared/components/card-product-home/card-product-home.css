@@ -1,7 +1,7 @@
 .card-produto {
     width: fit-content;
     max-width: 100%;
-    height: clamp(200px, 30vw, 233px);
+    /* height: clamp(200px, 30vw, 233px); */
 
     display: flex;
     flex-direction: column;
@@ -12,6 +12,7 @@
 
 /* Imagem e Texto */
 .card-produto div {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -39,7 +40,7 @@
 .card-produto div .container__texto {
     flex: 1;
     max-width: 100%;
-    width: clamp(180px, 40vw, 268px);
+    width: clamp(230px, 40vw, 268px);/* AQUI */
 
     display: flex;
     flex-direction: column;
@@ -103,7 +104,7 @@
 
     /* altura do card inteiro */
     .card-produto {
-        height: clamp(216px, 25vw + 50px, 407px);
+        /* height: clamp(216px, 25vw + 50px, 407px); */
     }
 
     /* Largura */

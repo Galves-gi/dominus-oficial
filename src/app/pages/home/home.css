@@ -1,4 +1,13 @@
 /* Mobile */
+h1 {
+    font-family: var(--fonte-Poppins);
+    font-weight: var(--fonte-bold);
+    color: var(--cor-azul);
+    text-align: center;
+    font-size: clamp(20px, 5vw, 28px);
+    margin: 3em 0;
+}
+
 .container__cards-produtos {
     width: 100%;
 
@@ -9,7 +18,7 @@
 
     gap: clamp(30px, 9vw + 10px, 70px);
 
-    padding-inline: 1rem;
+    padding: 0 1rem 3rem 1rem;
     box-sizing: border-box;
 }
 

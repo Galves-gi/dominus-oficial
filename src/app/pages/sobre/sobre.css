@@ -14,6 +14,7 @@ h1 {
     color: var(--cor-azul);
     text-align: center;
     font-size: clamp(20px, 5vw, 28px);
+    margin: 1.5em 0 0;
 }
 
 /* Texto */
@@ -26,7 +27,9 @@ p,
     line-height: 1.6;
     text-align: center;
 }
-
+span{
+    font-weight: var(--fonte-bold);
+}
 /* Ícones */
 .container--icones {
     width: 302px;
