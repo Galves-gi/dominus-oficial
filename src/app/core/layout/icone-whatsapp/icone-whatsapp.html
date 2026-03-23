@@ -1,0 +1,19 @@
+<a href="https://wa.me/5531984504703?text=Ol%C3%A1%20dominus%20caf%C3%A9s" target="_blank" class="whatsapp"
+    [class.whatsapp--open]="isOpen()" aria-label="Contato via WhatsApp">
+
+    <button class="whatsapp__trigger" aria-controls="whatsapp-box" (click)="toggleWhatsApp()"
+        [attr.aria-expanded]="isOpen()">
+
+        <img src="/icones/whatsapp.svg" alt="Falar no WhatsApp" class="whatsapp__icon">
+
+    </button>
+
+    <div id="whatsapp-box" class="whatsapp__box" role="region" aria-hidden="true">
+
+        <p class="whatsapp__text">
+            Quer falar no<br> WhatsApp?
+        </p>
+
+    </div>
+
+</a>

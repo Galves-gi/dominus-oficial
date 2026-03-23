@@ -1,0 +1,118 @@
+/* ===== Container ===== */
+.whatsapp {
+    width: fit-content;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    z-index: 1000;
+}
+
+/* ===== Botão ===== */
+.whatsapp__trigger {
+    width: clamp(56px, 6vw, 60px);
+    height: clamp(56px, 6vw, 60px);
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== Ícone ===== */
+.whatsapp__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    /* sombra suave */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Caixa ===== */
+.whatsapp__box {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+
+    width: 56px;
+    height: 56px;
+
+    background: #fff;
+    border-radius: 87px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 16px;
+
+    overflow: hidden;
+
+    /* estado fechado */
+    opacity: 0;
+    transform: scaleX(0.6);
+    transform-origin: left;
+
+    transition:
+        width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s ease,
+        transform 0.6s ease;
+
+    /* blur bottom suave */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    will-change: transform, opacity, width;
+}
+
+/* ===== Texto ===== */
+.whatsapp__text {
+    font-size: 14px;
+    color: #46C556;
+    text-align: right;
+    line-height: 1.2;
+    font-family: var(--fonte-Poppins);
+}
+
+/* ===== Estado ativo ===== */
+.whatsapp--open .whatsapp__box {
+    width: 166px;
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* ===== Desktop ajustes ===== */
+@media (min-width: 768px) {
+    .whatsapp {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+/* ANIMAÇÃO */
+.whatsapp__trigger {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.whatsapp--open .whatsapp__trigger {
+    animation: none;
+}

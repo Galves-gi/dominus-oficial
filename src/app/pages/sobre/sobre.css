@@ -27,9 +27,11 @@ p,
     line-height: 1.6;
     text-align: center;
 }
-span{
+
+span {
     font-weight: var(--fonte-bold);
 }
+
 /* Ícones */
 .container--icones {
     width: 302px;
@@ -49,7 +51,12 @@ span{
     width: 100px;
 }
 
-.container--icones img {
+.container--icones li:nth-child(2) {
+    align-self: flex-end;
+    width: 138px;
+}
+
+.container--icones li img {
     display: block;
     /* height: 40px; */
 }

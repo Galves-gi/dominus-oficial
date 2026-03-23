@@ -5,45 +5,34 @@ h1 {
     color: var(--cor-azul);
     text-align: center;
     font-size: clamp(20px, 5vw, 28px);
-    margin: 3em 0;
+    margin: 2.3em 0;
 }
 
 .container__cards-produtos {
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+
     justify-content: center;
-    align-items: center;
+    justify-items: center;
 
-    gap: clamp(30px, 9vw + 10px, 70px);
+    gap: clamp(30px, 6vw, 70px);
 
-    padding: 0 1rem 3rem 1rem;
+    padding: 0 1rem 3rem;
     box-sizing: border-box;
+
 }
 
 /* Desktop */
 @media screen and (min-width: 750px) {
     .container__cards-produtos {
-        width: 100%;
-        min-height: 100vh;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        justify-content: center;
-        align-items: flex-start;
-
+        grid-template-columns: repeat(2, minmax(220px, 400px));
         gap: clamp(30px, 6vw, 70px);
     }
 
-    /* Card 
     .card-produto {
-        flex: 1 1 calc(50% - clamp(30px, 6vw, 70px));
-    }*/
+        width: 100%;
+        max-width: 495px;
+    }
 }
-
-/* .card-produto {
-    flex: 1 1 100%;
-} */

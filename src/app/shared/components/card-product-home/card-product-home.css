@@ -9,7 +9,11 @@
     align-items: center;
     gap: clamp(12px, 2.5vw, 18px);
 }
-
+@media screen and (min-width:440px) {
+    .card-produto{
+        width: 400px;
+    }
+}
 /* Imagem e Texto */
 .card-produto div {
     width: 100%;
