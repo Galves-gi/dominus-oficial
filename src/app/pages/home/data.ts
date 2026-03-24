@@ -3,7 +3,7 @@ import { Product } from "../../core/models/card-product-home";
 export const cardsData: Product[] = [
     {
         id: 1,
-        image: "/imagens-home/arara-campeao-250.avif",
+        image: "imagens-home/arara-campeao-250.avif",
         title: "Café Arara Campeão -",
         title_highlight:" 86,75 pts ",
         type:"Torrado e Moído",
@@ -14,7 +14,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 2,
-        image: "/imagens-home/arara-500g.avif",
+        image: "imagens-home/arara-500g.avif",
         title: "Café Arara Campeão - ",
         title_highlight:"86,75 pts",
         type:"Torrado em Grãos",
@@ -24,7 +24,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 3,
-        image: "/imagens-home/arara-campeao-250.avif",
+        image: "imagens-home/arara-campeao-250.avif",
         title: "Café Arara Campeão -",
         title_highlight:" 86,75 pts ",
         type:"Torrado em Grãos",
@@ -35,7 +35,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 4,
-        image: "/imagens-home/arara-500g.avif",
+        image: "imagens-home/arara-500g.avif",
         title: "Café Arara Campeão - ",
         title_highlight:"86,75 pts",
         type:"Torrado e Moído",
@@ -46,7 +46,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 5,
-        image: "/imagens-home/arara-moca.avif",
+        image: "imagens-home/arara-moca.avif",
         title: "Arara Moca -",
         title_highlight:" 85 pts ",
         type:"Torrado em Grãos",
@@ -57,7 +57,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 6,
-        image: "/imagens-home/arara-moca-moido.avif",
+        image: "imagens-home/arara-moca-moido.avif",
         title: "Arara Moca -",
         title_highlight:" 85 pts",
         type:"Torrado e Moído",
@@ -68,7 +68,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 7,
-        image: "/imagens-home/arara-lata.avif",
+        image: "imagens-home/arara-lata.avif",
         title: "Café Arara Campeão -",
         title_highlight:" 86,75 pts",
         type:"torrado em Grãos, Tubolata",
@@ -79,7 +79,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 8,
-        image: "/imagens-home/dripp-coffee.avif",
+        image: "imagens-home/dripp-coffee.avif",
         title: "Dripp Coffee -",
         title_highlight:" Praticidade ",
         type:"Torrado e Moído",
@@ -90,7 +90,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 9,
-        image: "/imagens-home/fruit-catucai.avif",
+        image: "imagens-home/fruit-catucai.avif",
         title: "Fruit Catucaí 2SL",
         title_highlight:"Torrado em Grãos",
         type:"",
@@ -101,7 +101,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 10,
-        image: "/imagens-home/fruit-catucai-moido.avif",
+        image: "imagens-home/fruit-catucai-moido.avif",
         title: "Fruit Catucaí 2SL",
         title_highlight:"Torrado e Moído",
         type:"",
