@@ -18,6 +18,13 @@ body {
 body {
     overflow-x: hidden;
     background-color: #EFECEA;
+    padding-top: clamp(70px, 12vw, 90px);
+}
+
+@media (min-width: 720px) {
+    body {
+        padding-top: clamp(86.3px, 10vw, 158px);
+    }
 }
 
 html {

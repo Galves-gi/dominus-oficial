@@ -2,8 +2,10 @@
    HEADER
 ======================= */
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 200;
     box-shadow: 0 4px 20px #333333;
 
@@ -35,9 +37,9 @@ header {
 /* =======================
    LOGO
 ======================= */
-
 header .header__container a img {
     display: block;
+    width: auto;
     height: clamp(42px, 8vw, 66px);
 }
 
@@ -48,7 +50,7 @@ header .header__container a img {
 header .header__container nav {
     display: flex;
     align-items: center;
-    gap: clamp(10px, 3vw, 24px);
+    gap: 24px;
 }
 
 /* =======================
@@ -73,7 +75,7 @@ header .header__container nav {
     position: absolute;
     right: 0%;
     top: 42%;
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    transition: transform 0.4s ease, opacity 0.2s ease;
 }
 
 /* estado X */
@@ -91,15 +93,15 @@ header .header__container nav {
 
 /* estado hamburguer */
 .menu-abrir #bar1 {
-    transform: translateY(0.2em);
+    transform: translateY(0.3em);
 }
 
 .menu-abrir #bar2 {
-    transform: translateY(-.05em);
+    transform: translateY(-.015em);
 }
 
 .menu-abrir #bar3 {
-    transform: translateY(-0.3em);
+    transform: translateY(-0.31em);
 }
 
 /* =======================
@@ -141,9 +143,6 @@ header .header__container nav {
     transform: translateY(0);
 }
 
-/* =======================
-   LINKS
-======================= */
 .links__navegar li {
     width: 100%;
     display: flex;
@@ -191,7 +190,7 @@ header .header__container nav {
 .redes__sociais {
     display: flex;
     align-items: center;
-    gap: clamp(6px, 3vw, 16px);
+    gap: 24px;
 }
 
 .redes__sociais li a {
@@ -201,6 +200,7 @@ header .header__container nav {
 
 .redes__sociais li a img {
     width: clamp(20px, 5vw, 28px);
+    height: auto;
 }
 
 .redes__sociais li a span {
