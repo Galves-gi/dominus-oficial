@@ -27,9 +27,7 @@ header {
 
     border-bottom: clamp(6px, 1.5vw, 10px) solid var(--cor-bege);
 
-    position: sticky;
-    top: 0;
-    left: 0;
+    position: relative;
 
     z-index: 200;
 }
@@ -183,6 +181,10 @@ header .header__container nav {
     font-size: clamp(14px, 3.5vw, 16px);
 }
 
+.links__navegar li:first-child a img {
+    margin-right: 12px;
+}
+
 /* =======================
    REDES SOCIAIS
 ======================= */
@@ -208,6 +210,31 @@ header .header__container nav {
     color: var(--cor-azul);
     font-family: var(--fonte-Raleway);
     font-weight: var(--fonte-bold);
+}
+
+/* =======================
+   sobreposicao / background quando menu é aberto
+======================= */
+.menu-sobreposicao {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+
+    background: rgba(0, 102, 255, 0.15);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 150;
+
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+/* animação suave */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* =======================

@@ -36,13 +36,12 @@
 /* ===== Caixa ===== */
 .whatsapp__box {
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     left: 0;
 
-    width: 56px;
-    height: 56px;
+    height: clamp(56px, 6vw, 60px);
 
-    background: #fff;
+    background:var(--cor-branco);
     border-radius: 87px;
 
     display: flex;
@@ -81,7 +80,7 @@
 
 /* ===== Estado ativo ===== */
 .whatsapp--open .whatsapp__box {
-    width: 166px;
+    width: 170px;
     opacity: 1;
     transform: scaleX(1);
 }
@@ -91,6 +90,18 @@
     .whatsapp {
         bottom: 30px;
         right: 30px;
+    }
+
+    .whatsapp__box {
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+    }
+}
+
+@media (min-width: 933px) {
+    .whatsapp__box {
+        width: 60px;
     }
 }
 

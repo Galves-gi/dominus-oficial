@@ -82,7 +82,6 @@ span {
 /* Imagens empilhadas */
 .container__imagens-empilhada {
     width: 302px;
-    max-width: 800px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -91,7 +90,9 @@ span {
 }
 
 .container__imagens-empilhada img {
+    width: auto;
     height: clamp(140px, 40vw, 174px);
+    object-fit: cover;
     border-radius: 5px;
     border: 1px solid var(--cor-azul);
 }
@@ -145,6 +146,7 @@ span {
     }
 
     .container__imagens-empilhada {
+        width: auto;
         flex-wrap: nowrap;
     }
 

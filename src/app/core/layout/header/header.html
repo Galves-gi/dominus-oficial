@@ -1,4 +1,4 @@
-<header>
+<header #headerContainer>
     <div class="header__container">
         <!-- logo -->
         <a routerLink="/" aria-label="Ir para a página inicial da Dominus Cafés">
@@ -10,10 +10,9 @@
         <nav aria-label="Navegação principal">
 
             <!-- Links principais -->
-            <ul class="links__navegar" [class.menu-open]="openMenu">
-
+            <ul class="links__navegar" [class.menu-open]="isMenuOpen">
                 <li>
-                    <a href="#catalogo">
+                    <a href="#catalogo" (click)="closeMenu()">
 
                         <img src="icones/icone-header-xicara.svg" alt="" aria-hidden="true">
 
@@ -23,7 +22,7 @@
                 </li>
 
                 <li>
-                    <a routerLink="/sobre">
+                    <a routerLink="/sobre" (click)="closeMenu()">
 
                         <img src="icones/icone-header-caneta.svg" alt="" aria-hidden="true">
 
@@ -62,9 +61,8 @@
             </ul>
 
             <!-- Botão mobile -->
-            <button type="button" class="botao_menu icone_menu" (click)="menu()" [class.menu-fechar]="openMenu"
-                [class.menu-abrir]="!openMenu" aria-label="Abrir menu de navegação" [attr.aria-expanded]="openMenu"
-                aria-controls="menu-principal">
+            <button type="button" class="botao_menu icone_menu" (click)="toggleMenu()" [class.menu-fechar]="isMenuOpen"
+                [class.menu-abrir]="!isMenuOpen" [attr.aria-expanded]="isMenuOpen" aria-label="Abrir menu de navegação">
 
                 <span class="bar" id="bar1"></span>
                 <span class="bar" id="bar2"></span>
@@ -75,5 +73,9 @@
         </nav>
     </div>
 
-
 </header>
+
+<!-- sobreposição -->
+@if (isMenuOpen) {
+<div class="menu-sobreposicao" (click)="closeMenu()"></div>
+}

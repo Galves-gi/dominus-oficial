@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -9,10 +9,40 @@ import { RouterLink } from "@angular/router";
 })
 export class Header {
 
-  openMenu:boolean = false;
+  isMenuOpen = false;
 
-  menu(){
-    this.openMenu = !this.openMenu;
+  @ViewChild('headerContainer') headerRef!: ElementRef<HTMLElement>;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+
+    // trava scroll
+    document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  @HostListener('document:click', ['$event'])
+  handleOutsideClick(event: MouseEvent): void {
+    if (!this.isMenuOpen) return;
+
+    const target = event.target as HTMLElement;
+
+    const clickedInsideHeader =
+      this.headerRef?.nativeElement.contains(target);
+
+    if (!clickedInsideHeader) {
+      this.closeMenu();
+    }
+  }
+
+  // ESC fecha menu
+  @HostListener('document:keydown.escape')
+  handleEscape(): void {
+    this.closeMenu();
   }
 
 }

@@ -5,12 +5,21 @@ export function generateWhatsAppLink(product: any): string {
 
   const nomeCafe = product.title.replace('-', '').trim();
 
-  const message =
-    `Olá Dominus Cafés,
-    Tenho interesse no ${nomeCafe} (${product.title_highlight?.trim()})
-    ${product.type ? `Quero ${product.type}` : ''}
+  const peso = product.specification?.split(' - ')[0] || '';
+  const valor = product.specification?.split(' - ')[1] || '';
 
-    Pode me passar as informações para finalizar a compra?`;
+  const message =
+  `Olá, Dominus Cafés!  
+
+  Tenho interesse no produto abaixo:
+
+  ${nomeCafe} 
+  ${product.type ? ` - ${product.type}` : ''}
+  ${product.title_highlight ? ` - ${product.title_highlight.trim()}` : ''}
+  ${peso ? ` - ${peso}` : ''}
+  ${valor ? ` - ${valor}\n` : ''}
+
+  Poderia me passar mais detalhes sobre disponibilidade e formas de pagamento?`;
 
   return `${baseUrl}?text=${encodeURIComponent(message)}`;
 }
