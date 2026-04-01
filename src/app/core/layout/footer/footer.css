@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    height: auto;
+    min-height: 200px;
     background-color: var(--cor-azul);
     padding: calc(10px + 2em) calc(10px + 2vw);
     position: relative;

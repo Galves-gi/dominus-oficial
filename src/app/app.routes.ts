@@ -1,19 +1,14 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    /*  MANUTENÇÃO   
-    {
-        path: '',
-        loadComponent: () => import('./pages/maintenance/maintenance').then(m => m.Maintenance)
-    }, */
 
     {
-        path:'',
-        loadComponent:() => import('./pages/home/home').then(m => m.Home)
+        path: '',
+        loadComponent: () => import('./pages/home/home').then(m => m.Home)
     },
     {
-        path:'sobre',
-        loadComponent:() => import('./pages/sobre/sobre').then(m => m.Sobre)
+        path: 'sobre',
+        loadComponent: () => import('./pages/sobre/sobre').then(m => m.Sobre)
     },
     {
         path: '**',

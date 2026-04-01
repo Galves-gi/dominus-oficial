@@ -1,12 +1,15 @@
-<app-banner></app-banner>
+<main>
 
-<h1>Conheça Nosso Catálogo de <br><span
-        class="destaque--bege">Cafés Especiais:</span></h1>
+    <app-banner></app-banner>
 
-<section class="container__cards-produtos" id="catalogo">
-    @for (produto of dataProduct; track produto.id) {
+    <h1 id="catalogo">Conheça Nosso Catálogo de <br><span class="destaque--bege">Cafés Especiais:</span></h1>
 
-    <app-card-product-home [product]="produto"></app-card-product-home>
+    <article class="container__cards-produtos">
+        @for (produto of dataProduct; track produto.id) {
 
-    }
-</section>
+        <app-card-product-home [product]="produto"></app-card-product-home>
+
+        }
+    </article>
+
+</main>
