@@ -50,7 +50,7 @@
 .banner__button {
     position: absolute;
     bottom: clamp(15px, 5vw, 30px);
-    left: clamp(20px, 6vw, 30px);
+    left: 15px;
 
     width: calc(113px + 2vw);
     height: clamp(50px, 6vw, 69px);
@@ -81,6 +81,6 @@
 @media (min-width: 570px) {
     .banner__button {
         bottom: clamp(20px, 4vw, 30px);
-        left: clamp(20px, 4vw, 30px);
+        left: 15px;
     }
 }
