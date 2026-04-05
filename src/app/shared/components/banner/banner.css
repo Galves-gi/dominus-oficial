@@ -1,86 +1,85 @@
-/* ===== Banner ===== */
 .banner {
-    width: 100%;
-    background: var(--cor-azul);
-
-    display: flex;
-    justify-content: center;
+  background-color: var(--cor-azul);
+  display: flex;
+  justify-content: center;
 }
 
-/* ===== Container ===== */
+/* LIMITADOR */
 .banner__container {
-    width: 100%;
-    max-width: 950px;
+  max-width: 1000px;
+  width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-
-
-/* ===== Imagem ===== */
-.banner__imagem {
-    height: 100%;
-    position: relative;
-}
-
-.banner__imagem--mobile {
-    display: block;
-}
-
-.banner__imagem--desktop {
-    display: none;
-}
-
-@media (min-width: 570px) {
-    .banner__imagem--mobile {
-        display: none;
-    }
-
-    .banner__imagem--desktop {
-        display: block;
-    }
+/* IMAGEM */
+.banner__imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ===== Botão ===== */
-.banner__button {
-    position: absolute;
-    bottom: clamp(15px, 5vw, 30px);
-    left: 15px;
+.banner__botao {
+  position: absolute;
 
-    width: calc(113px + 2vw);
-    height: clamp(50px, 6vw, 69px);
+  /* POSIÇÃO */
+  left: clamp(10px, calc(-2.86px + 4.02vw), 20px);
+  bottom: clamp(20px, calc(-12.14px + 10.04vw), 45px);
 
-    background: var(--cor-bege);
-    color: var(--cor-branco);
+  /* TAMANHO */
+  width: clamp(119px, calc(53.4px + 20.5vw), 170px);
+  height: clamp(40px, calc(27.14px + 4.02vw), 50px);
 
-    font-family: var(--fonte-Satisfy);
-    font-size: clamp(19px, 2vw, 25px);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* ESTILO */
+  background: var(--cor-bege);
+  color: var(--cor-branco);
 
-    text-decoration: underline;
-    text-decoration-color: var(--cor-branco);
+  font-family: var(--fonte-Satisfy);
+  font-size: clamp(16px, 2.2vw, 25px);
 
-    border-radius: clamp(5px, 0.5vw, 7px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: underline;
+  text-decoration-color: var(--cor-branco);
+
+  border-radius: clamp(5px, 0.5vw, 7px);
+  transition: 0.3s ease;
 }
 
-/* A partir de 400px entra o fluido */
-@media (min-width: 400px) {
-    .banner__button {
-        width: clamp(145px, 18vw, 197px);
-    }
+.banner__botao:hover,
+.banner__botao:focus {
+  opacity: 0.85;
+  outline: none;
 }
 
+/* DESKTOP / TABLET (570+) */
 @media (min-width: 570px) {
-    .banner__button {
-        bottom: clamp(20px, 4vw, 30px);
-        left: 15px;
-    }
+  .banner__botao {
+
+    position: absolute;
+
+    /* POSIÇÃO FLUIDA */
+    left: calc(10px + (28 - 10) * ((100vw - 570px) / 430));
+    bottom: calc(13px + (35 - 13) * ((100vw - 570px) / 430));
+
+    /* TAMANHO FLUIDO */
+    width: calc(145px + (170 - 145) * ((100vw - 570px) / 430));
+    height: calc(40px + (50 - 40) * ((100vw - 570px) / 430));
+  }
+}
+
+@media (min-width: 1000px) {
+  .banner__botao {
+    left: 28px;
+    bottom: 35px;
+    width: 170px;
+    height: 50px;
+  }
 }

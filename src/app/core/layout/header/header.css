@@ -351,6 +351,7 @@ header .header__container nav {
 
     .redes__sociais li a img {
         width: clamp(20px, 2vw, 28px);
+        height: auto;
     }
 
     .redes__sociais li a span {

@@ -1,92 +1,61 @@
-# Dominus
+# Dominus Cafés — Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.20.
+Projeto desenvolvido em Angular v20
 
-## Development server
+---
 
-To start a local development server, run:
+## Como rodar o projeto
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse no navegador:
+http://localhost:4200
 
-## Building
+---
 
-To build the project run:
+## Build (produção)
+Site SSG: Os arquivos estáticos serão gerados prontos para servidor.
+Gera os arquivos otimizados para deploy:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos serão gerados em:
 
-# Estrutura
-bash```
-src
- ├── app
- │
- │   ├── core
- │   │    ├── layout
- │   │    │    ├── header
- │   │    │    │    ├── header.component.ts
- │   │    │    │    ├── header.component.html
- │   │    │    │    └── header.component.scss
- │   │    │    │
- │   │    │    ├── footer
- │   │    │    │    ├── footer.component.ts
- │   │    │    │    ├── footer.component.html
- │   │    │    │    └── footer.component.scss
- │   │    │
- │   │    ├── services
- │   │    │    └── seo.service.ts
- │   │
- │   │    └── models
- │   │         └── card-product-home.model.ts
- │
- │   ├── shared
- │   │    ├── components
- │   │    │    └── card
- │   │    │         ├── card.component.ts
- │   │    │         ├── card.component.html
- │   │    │         └── card.component.scss
- │   
- │   ├── pages
- │   │    ├── home
- │   │    │    ├── home.component.ts
- │   │    │    ├── home.component.html
- │   │    │    └── home.component.scss
- │   │
- │   │    ├── sobre
- │   │    │    ├── sobre.component.ts
- │   │    │    ├── sobre.component.html
- │   │    │    └── sobre.component.scss
- │   │
- │   │    ├── not-found
- │   │    │    └── not-found.component.ts
- │   │
- │   │    └── maintenance
- │   │         └── maintenance.component.ts
- │
- │   ├── app.routes.ts
- │   └── app.config.ts
-
+```bash
+dist/
 ```
 
 ---
 
-# SSG 
+## SEO
 
-## Semantic Versioning
-bash```
-package.json
-    "version": "0.0.0"
+O projeto utiliza:
+
+* Meta Tags dinâmicas
+* Open Graph
+* JSON-LD (Product + Organization)
+* Otimização de performance (LCP, fontes, imagens)
+
+---
+
+## Tecnologias
+
+* Angular
+* TypeScript
+* HTML5 + CSS3
+* SEO técnico (Schema.org)
+
+---
+
+## Observações
+
+* Projeto otimizado para Mobile First
+* Foco em performance e acessibilidade
+* Preparado para crescimento (SSR/SSG)
 
 
-1.4.2
-│ │ │
-│ │ └── Correção de bug
-│ └──── Nova funcionalidade compatível
-└────── Mudança grande / breaking change
-```

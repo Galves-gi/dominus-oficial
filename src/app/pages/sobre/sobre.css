@@ -31,7 +31,9 @@ p,
 span {
     font-weight: var(--fonte-bold);
 }
-
+.destaque--azul {
+    color: var(--cor-azul);
+}
 /* Ícones */
 .container--icones {
     width: 302px;
