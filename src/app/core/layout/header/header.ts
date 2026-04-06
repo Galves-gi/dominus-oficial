@@ -23,6 +23,11 @@ export class Header {
   closeMenu(): void {
     this.isMenuOpen = false;
     document.body.style.overflow = '';
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   @HostListener('document:click', ['$event'])

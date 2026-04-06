@@ -171,6 +171,7 @@ header .header__container nav {
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 3px;
+    pointer-events: auto;
 }
 
 .links__navegar li a img {
