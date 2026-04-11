@@ -53,14 +53,8 @@
   transition: 0.3s ease;
 }
 
-.banner__botao:hover,
-.banner__botao:focus {
-  opacity: 0.85;
-  outline: none;
-}
-
 /* DESKTOP / TABLET (570+) */
-@media (min-width: 570px) {
+@media (min-width: 569px) {
   .banner__botao {
 
     position: absolute;

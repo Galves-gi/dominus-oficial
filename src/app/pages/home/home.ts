@@ -4,9 +4,10 @@ import { cardsData } from "./data"
 import { Banner } from '../../shared/components/banner/banner';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
+import { AnimateCardOnScroll } from '../../shared/animate-card-on-scroll';
 @Component({
   selector: 'app-home',
-  imports: [CardProductHome, Banner],
+  imports: [CardProductHome, Banner, AnimateCardOnScroll],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

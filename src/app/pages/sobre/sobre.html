@@ -8,7 +8,7 @@
     </h1>
 
     <!-- Ícones -->
-    <section aria-label="Princípios da marca">
+    <section aria-label="Princípios da marca" appAnimateCardOnScroll [delay]="1" [once]="true" direction="up">
         <ul class="container--icones">
             <li>
                 <img src="imagens-sobre/planta.svg" alt="Ícone representando produção" width="107" height="55">
@@ -35,9 +35,12 @@
     <!-- Imagens -->
     <section aria-label="História da família">
         <div class="container__imagens-empilhada">
-            <img src="imagens-sobre/familia.avif" alt="Família reunida na fazenda" width="266" height="166">
-            <img src="imagens-sobre/romildo-no-cafezal.avif" alt="Romildo no cafezal" width="125" height="166">
-            <img src="imagens-sobre/fundadores.avif" alt="Fundadores da marca" width="125" height="166">
+            <img src="imagens-sobre/familia.avif" alt="Família reunida na fazenda" width="266" height="166"
+                appAnimateCardOnScroll [delay]="10" direction="left">
+            <img src="imagens-sobre/romildo-no-cafezal.avif" alt="Romildo no cafezal" width="125" height="166"
+                appAnimateCardOnScroll [delay]="8" direction="right">
+            <img src="imagens-sobre/fundadores.avif" alt="Fundadores da marca" width="125" height="166"
+                appAnimateCardOnScroll [delay]="5" direction="right">
         </div>
     </section>
 
@@ -53,10 +56,13 @@
     </article>
 
     <section aria-label="Paisagem do café">
-        <div class="container__imagens">
-            <img src="imagens-sobre/por-do-sol-cafe.avif" alt="Plantação de café ao pôr do sol">
-            <img src="imagens-sobre/flores-de-cafes.avif" alt="Flores do cafeeiro">
-            <img src="imagens-sobre/por-do-sol.avif" alt="Pôr do sol na fazenda">
+        <div class="container__imagens" appAnimateCardOnScroll>
+            <img src="imagens-sobre/por-do-sol-cafe.avif" alt="Plantação de café ao pôr do sol" appAnimateCardOnScroll
+                [delay]="3" direction="left">
+            <img src="imagens-sobre/flores-de-cafes.avif" alt="Flores do cafeeiro" appAnimateCardOnScroll [delay]="4"
+                direction="up">
+            <img src="imagens-sobre/por-do-sol.avif" alt="Pôr do sol na fazenda" appAnimateCardOnScroll [delay]="5"
+                direction="right">
         </div>
     </section>
 
@@ -72,14 +78,16 @@
     </article>
 
     <section aria-label="Variedade de cafés">
-        <div class="container__imagens-empilhada">
-            <img src="imagens-sobre/flores-de-cafes.avif" alt="Flores de café" loading="lazy" width="126" height="166">
+        <div class="container__imagens-empilhada" appAnimateCardOnScroll>
+            <img src="imagens-sobre/flores-de-cafes.avif" alt="Flores de café" loading="lazy" width="126" height="166"
+                appAnimateCardOnScroll [delay]="6" direction="left">
             <img src="imagens-sobre/cafes-verdes.avif" alt="Grãos verdes de café" loading="lazy" width="126"
-                height="166">
+                height="166" appAnimateCardOnScroll [delay]="7" direction="left">
             <img src="imagens-sobre/cafe-amarelo.avif" alt="Grãos amarelos de café" loading="lazy" width="126"
-                height="166">
+                height="166" appAnimateCardOnScroll [delay]="8" direction="right">
+
             <img src="imagens-sobre/cafe-vermelho.avif" alt="Grãos vermelhos maduros" loading="lazy" width="126"
-                height="166">
+                height="166" appAnimateCardOnScroll [delay]="9" direction="right">
         </div>
     </section>
 
@@ -93,10 +101,13 @@
     </article>
 
     <section aria-label="Produto final">
-        <div class="container__imagens">
-            <img src="imagens-sobre/produto-cafe.avif" alt="Pacote de café pronto" loading="lazy">
-            <img src="imagens-sobre/graoes.avif" alt="Grãos de café torrados" loading="lazy">
-            <img src="imagens-sobre/preparacao-cafe.avif" alt="Preparação do café" loading="lazy">
+        <div class="container__imagens" appAnimateCardOnScroll>
+            <img src="imagens-sobre/produto-cafe.avif" alt="Pacote de café pronto" loading="lazy" appAnimateCardOnScroll
+                [delay]="2.50" direction="left">
+            <img src="imagens-sobre/graoes.avif" alt="Grãos de café torrados" loading="lazy" appAnimateCardOnScroll
+                [delay]="2.75" direction="up">
+            <img src="imagens-sobre/preparacao-cafe.avif" alt="Preparação do café" loading="lazy" appAnimateCardOnScroll
+                [delay]="3" direction="right">
         </div>
     </section>
 

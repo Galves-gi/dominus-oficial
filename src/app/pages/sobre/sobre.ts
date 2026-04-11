@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { AnimateCardOnScroll } from '../../shared/animate-card-on-scroll';
 
 @Component({
   selector: 'app-sobre',
-  imports: [],
+  imports: [AnimateCardOnScroll],
   templateUrl: './sobre.html',
   styleUrl: './sobre.css',
 })

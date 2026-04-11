@@ -58,6 +58,12 @@ select {
     appearance: none;
 }
 
+button:hover,
+button:focus {
+    opacity: 0.85;
+    outline: none;
+}
+
 /* ===== Links ===== */
 
 a {
@@ -99,7 +105,7 @@ h6 {
     --cor-branco: #EFECEA;
 }
 
-/*  invisível visualmente
+/*  ACESSIBILIDADE: invisível visualmente
     visível para leitor de tela */
 .visually-hidden {
     position: absolute;

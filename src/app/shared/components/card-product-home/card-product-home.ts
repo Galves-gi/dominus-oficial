@@ -2,7 +2,6 @@ import { Component, computed, input } from '@angular/core';
 import { Product } from '../../../core/models/card-product-home';
 import { generateWhatsAppLink } from '../../../core/helpers/whatsapp.helper';
 
-
 @Component({
   selector: 'app-card-product-home',
   imports: [],
