@@ -91,4 +91,8 @@ DIREÇÃO
 EFEITO UMA VEZ
 <div appAnimateCardOnScroll [once]="true"></div>
 
+
+obs:
+no container do elemento animado, colocar overflow: hidden;
+
 */

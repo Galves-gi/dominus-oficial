@@ -8,7 +8,7 @@
         @for (produto of dataProduct; track produto.id; let i = $index) {
 
         <app-card-product-home [product]="produto" appAnimateCardOnScroll [delay]="i"
-            direction="right"></app-card-product-home>
+            direction="right" [once]="true"></app-card-product-home>
 
         }
     </article>

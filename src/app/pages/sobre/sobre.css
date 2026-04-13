@@ -5,6 +5,7 @@
 
     gap: clamp(28px, 6vw, 44px);
     padding: clamp(16px, 4vw, 24px);
+    overflow: hidden;
 }
 
 /* Título */
