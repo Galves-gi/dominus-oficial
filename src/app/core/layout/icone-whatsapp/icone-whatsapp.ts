@@ -24,7 +24,7 @@ export class IconeWhatsapp {
 
     Gostaria de avaliar as opções para seguir com a compra`;
 
-    this.whatsAppMessage = `https://wa.me/5531984504703?text=${encodeURIComponent(message)}`;
+    this.whatsAppMessage = `https://wa.me/5531999525717?text=${encodeURIComponent(message)}`;
     /* fim mensagem */
 
 
