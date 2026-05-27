@@ -1,6 +1,6 @@
 # Dominus Cafés
 
-![Banner Desktop](public/imagens-readme/capa-readme.jpg)
+![Banner Desktop](public/capa-readme.jpg)
 
 ---
 
