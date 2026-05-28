@@ -45,9 +45,7 @@ Além da apresentação visual, o sistema foi estruturado para oferecer alta per
 
 ---
 
-## Exibição
-
-### Website em Produção
+## Website em Produção
 
 Acesse o site Dominus Cafés através do link abaixo:
 
@@ -219,6 +217,38 @@ Configura arquivos para motores de busca encontrarem todas as páginas e entende
 **Como faz:**
 - `public/sitemap.xml` lista todas URLs indexáveis
 - `public/robots.txt` permite crawling e direciona para sitemap
+
+---
+### 8. Geração Dinâmica de Link para WhatsApp
+
+**O que faz:**
+
+Gera automaticamente um link personalizado para o WhatsApp contendo as informações do produto selecionado, permitindo que o cliente entre em contato com a empresa com uma mensagem pré-preenchida e contextualizada.
+
+**Como faz:**
+
+- Utiliza um helper centralizado (`/core/helpers/whatsapp.helper`) para encapsular toda a lógica de geração do link.
+- O componente cria um `computed()` que recalcula automaticamente a URL sempre que os dados do produto são alterados.
+- Extrai dinamicamente informações como nome, tipo, destaque, peso e valor do produto.
+- Monta uma mensagem padronizada utilizando template strings.
+- Aplica `encodeURIComponent()` para garantir compatibilidade com caracteres especiais, acentos e quebras de linha.
+- Gera a URL final utilizando a API oficial do WhatsApp (`wa.me`).
+- Mantém a lógica desacoplada da interface, facilitando reutilização e manutenção do código.
+
+**Implementação:**
+
+```ts
+link = computed(() => generateWhatsAppLink(this.product()));
+```
+
+**Benefícios:**
+
+- ✅ Mensagens consistentes para todos os produtos
+- ✅ Melhor experiência do usuário
+- ✅ Redução de erros de digitação pelo cliente
+- ✅ Lógica reutilizável em qualquer componente
+- ✅ Atualização automática através dos Angular Signals
+- ✅ Código mais limpo e desacoplado
 
 ---
 
