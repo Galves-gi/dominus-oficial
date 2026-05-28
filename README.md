@@ -15,7 +15,7 @@
 
 ## Resumo do Projeto
 
- Site combina design refinado, otimização SEO, renderização server-side e arquitetura moderna em Angular 20 para criar uma experiência rápida, responsiva e visualmente marcante.
+Projeto desenvolvido em Angular 20 com SSR, focado em performance, SEO e responsividade. A plataforma apresenta cafés especiais através de uma experiência visual moderna, arquitetura escalável e carregamento otimizado.
 
 ---
 
@@ -52,18 +52,6 @@ Além da apresentação visual, o sistema foi estruturado para oferecer alta per
 Acesse o site Dominus Cafés através do link abaixo:
 
 🔗 **[dominuscafes.com.br](https://dominuscafes.com.br)**
-
-
-### Ambiente de Desenvolvimento
-
-Para testar localmente:
-
-```bash
-npm install
-npm start
-```
-
-Acesse em `http://localhost:4200`
 
 ---
 
