@@ -10,7 +10,7 @@ export class AnimateCardOnScroll implements OnInit, OnDestroy {
   @Input() once: boolean = false; // anima só uma vez
   @Input() direction: 'up' | 'left' | 'right' = 'up';
 
-  private observer!: IntersectionObserver;
+  private observer?: IntersectionObserver;
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
@@ -18,7 +18,6 @@ export class AnimateCardOnScroll implements OnInit, OnDestroy {
 
     const delayTime = this.delay * 10;
 
-    // direção inicial
     let transformInitial = 'translateY(40px)';
 
     if (this.direction === 'left') {
@@ -29,7 +28,6 @@ export class AnimateCardOnScroll implements OnInit, OnDestroy {
       transformInitial = 'translateX(40px)';
     }
 
-    // estado inicial
     this.renderer.setStyle(this.el.nativeElement, 'opacity', '0');
     this.renderer.setStyle(this.el.nativeElement, 'transform', transformInitial);
     this.renderer.setStyle(
@@ -38,27 +36,29 @@ export class AnimateCardOnScroll implements OnInit, OnDestroy {
       `all 0.6s ease ${delayTime}ms`
     );
 
-    this.observer = new IntersectionObserver(
-      ([entry]) => {
+    if (typeof IntersectionObserver !== 'undefined') {
+      this.observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            this.renderer.setStyle(this.el.nativeElement, 'opacity', '1');
+            this.renderer.setStyle(this.el.nativeElement, 'transform', 'translate(0)');
 
-        if (entry.isIntersecting) {
-          this.renderer.setStyle(this.el.nativeElement, 'opacity', '1');
-          this.renderer.setStyle(this.el.nativeElement, 'transform', 'translate(0)');
-
-          if (this.once) {
-            this.observer.unobserve(this.el.nativeElement);
+            if (this.once) {
+              this.observer?.unobserve(this.el.nativeElement);
+            }
+          } else if (!this.once) {
+            this.renderer.setStyle(this.el.nativeElement, 'opacity', '0');
+            this.renderer.setStyle(this.el.nativeElement, 'transform', transformInitial);
           }
+        },
+        { threshold: 0.2 }
+      );
 
-        } else if (!this.once) {
-          this.renderer.setStyle(this.el.nativeElement, 'opacity', '0');
-          this.renderer.setStyle(this.el.nativeElement, 'transform', transformInitial);
-        }
-
-      },
-      { threshold: 0.2 }
-    );
-
-    this.observer.observe(this.el.nativeElement);
+      this.observer.observe(this.el.nativeElement);
+    } else {
+      this.renderer.setStyle(this.el.nativeElement, 'opacity', '1');
+      this.renderer.setStyle(this.el.nativeElement, 'transform', 'translate(0)');
+    }
   }
 
   ngOnDestroy(): void {
