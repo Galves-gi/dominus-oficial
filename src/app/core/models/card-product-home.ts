@@ -11,4 +11,5 @@ export interface Product {
 
     description:string;
     description_highlight:string;
+    botao?:string;
 }

@@ -42,7 +42,7 @@
     <a [href]="link()" target="_blank" class="botao__comprar" aria-label="Comprar café Arara 500g pelo WhatsApp">
         <img src="icones/zap-card-produto.svg" alt="ícone do WhatsApp" aria-hidden="true" width="25" height="25">
 
-        <span>COMPRAR AGORA</span>
+        <span>{{ product()?.botao  || "COMPRAR AGORA"}}</span>
 
         <img src="icones/seta-card-produto.svg" alt="ícone de seta apontada para o lado direto" aria-hidden="true" width="28" height="16">
     </a>

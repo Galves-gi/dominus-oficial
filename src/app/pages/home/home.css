@@ -1,6 +1,7 @@
-main{
+main {
     min-height: 100vh;
 }
+
 /* Mobile */
 h1 {
     font-family: var(--fonte-Poppins);
@@ -38,5 +39,26 @@ h1 {
         width: 100%;
         max-width: 495px;
         height: 100%;
+    }
+
+    .container__cards-produtos>app-card-product-home.cafelab {
+        display: block;
+        width: 100%;
+        max-width: none;
+        grid-column: 1 / -1;
+    }
+
+    .container__cards-produtos>app-card-product-home.cafelab ::ng-deep .card-produto {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    app-card-product-home.cafelab ::ng-deep .card-produto div,
+    app-card-product-home.cafelab ::ng-deep .container__texto,
+    app-card-product-home.cafelab ::ng-deep .botao__comprar,
+    app-card-product-home.cafelab ::ng-deep .card-produto div figure img {
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
     }
 }

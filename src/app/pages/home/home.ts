@@ -13,7 +13,17 @@ import { AnimateCardOnScroll } from '../../shared/animate-card-on-scroll';
 })
 export class Home implements OnInit {
   dataProduct = cardsData;
-
+  cafelab = {
+        id: 7,
+        image: "imagens-home/cafelab.jpg",
+        title: "PROJETO CAFÉ LAB - Turismo de Experiência no Sítio Terra Boa - Dominus Cafés ",
+        title_highlight: "",
+        type: "",
+        specification: "a partir de R$00,00",
+        description: "Viva uma experiência completa no mundo do café! Conheça o dia a dia da produção de cafés especiais no Sítio Terra Boa, acompanhando todo o processo do cultivo à xícara. Imersão na rotina da fazenda, colheita, histórias e curiosidades. Para amantes de café, famílias e pequenos grupos. Agende pelo WhatsApp. ",
+        description_highlight: "",
+        botao:"QUERO SABER MAIS",
+    };
 
   constructor(private meta: Meta, private title: Title, private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document

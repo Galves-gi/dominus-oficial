@@ -9,10 +9,6 @@ export const routes: Routes = [
     {
         path: 'sobre',
         loadComponent: () => import('./pages/sobre/sobre').then(m => m.Sobre)
-    },
-    {
-        path: '**',
-        loadComponent: () => import('./pages/not-found/not-found').then(m => m.NotFound)
     }
 
 ];
