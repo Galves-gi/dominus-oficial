@@ -28,6 +28,7 @@ h1 {
     overflow: hidden;
 }
 
+
 /* Desktop */
 @media screen and (min-width: 750px) {
     .container__cards-produtos {
@@ -55,10 +56,17 @@ h1 {
 
     app-card-product-home.cafelab ::ng-deep .card-produto div,
     app-card-product-home.cafelab ::ng-deep .container__texto,
-    app-card-product-home.cafelab ::ng-deep .botao__comprar,
-    app-card-product-home.cafelab ::ng-deep .card-produto div figure img {
+    app-card-product-home.cafelab ::ng-deep .botao__comprar {
         width: 100% !important;
         max-width: none !important;
         height: auto !important;
+    }
+
+    app-card-product-home.cafelab ::ng-deep .card-produto div figure img {
+        width: 100%;
+        max-width: 1043px !important;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
 }

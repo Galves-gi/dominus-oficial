@@ -71,7 +71,7 @@
 
 /* ===== Texto ===== */
 .whatsapp__text {
-    font-size: 14px;
+    font-size: 14px !important;
     color: #46C556;
     text-align: right;
     line-height: 1.2;

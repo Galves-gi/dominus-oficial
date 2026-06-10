@@ -15,12 +15,12 @@ export class Home implements OnInit {
   dataProduct = cardsData;
   cafelab = {
         id: 7,
-        image: "imagens-home/cafelab.jpg",
-        title: "PROJETO CAFÉ LAB - Turismo de Experiência no Sítio Terra Boa - Dominus Cafés ",
+        image: "imagens-home/cafelab.avif",
+        title: "CAFÉ LAB: Pra se encantar, é só começar!",
         title_highlight: "",
         type: "",
-        specification: "a partir de R$00,00",
-        description: "Viva uma experiência completa no mundo do café! Conheça o dia a dia da produção de cafés especiais no Sítio Terra Boa, acompanhando todo o processo do cultivo à xícara. Imersão na rotina da fazenda, colheita, histórias e curiosidades. Para amantes de café, famílias e pequenos grupos. Agende pelo WhatsApp. ",
+        specification: "a partir de R$50,00",
+        description: "Vivência sensorial e educativa, com ênfase na cultura do café especial, na sustentabilidade e na agroecologia. Duração: 03h Agendamento pelo whatsapp.",
         description_highlight: "",
         botao:"QUERO SABER MAIS",
     };
