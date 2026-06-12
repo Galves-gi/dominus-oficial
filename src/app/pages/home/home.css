@@ -32,8 +32,9 @@ h1 {
 /* Desktop */
 @media screen and (min-width: 750px) {
     .container__cards-produtos {
-        grid-template-columns: repeat(2, minmax(220px, 400px));
+        grid-template-columns: repeat(2, minmax(220px, clamp(350px, 30vw, 495px)));
         gap: clamp(30px, 6vw, 70px);
+        
     }
 
     .card-produto {
@@ -45,7 +46,7 @@ h1 {
     .container__cards-produtos>app-card-product-home.cafelab {
         display: block;
         width: 100%;
-        max-width: none;
+        max-width: 960px !important;
         grid-column: 1 / -1;
     }
 

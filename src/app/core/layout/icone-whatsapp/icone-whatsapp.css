@@ -41,7 +41,7 @@
 
     height: clamp(56px, 6vw, 60px);
 
-    background:var(--cor-branco);
+    background: var(--cor-branco);
     border-radius: 87px;
 
     display: flex;
@@ -71,12 +71,15 @@
 
 /* ===== Texto ===== */
 .whatsapp__text {
-    font-size: 14px !important;
+    font-size: clamp(14px, 1vw, 14px) !important;
     color: #46C556;
     text-align: right;
     line-height: 1.2;
     font-family: var(--fonte-Poppins);
     font-weight: bold;
+
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
 /* ===== Estado ativo ===== */
