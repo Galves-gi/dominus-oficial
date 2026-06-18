@@ -46,13 +46,12 @@
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 
-    padding-right: 16px;
+    padding: 0 0 0 60px;
 
     overflow: hidden;
 
-    /* estado fechado */
     opacity: 0;
     transform: scaleX(0.6);
     transform-origin: left;
@@ -62,7 +61,7 @@
         opacity 0.4s ease,
         transform 0.6s ease;
 
-    /* blur bottom suave */
+
     backdrop-filter: blur(8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     z-index: 1;
@@ -73,7 +72,7 @@
 .whatsapp__text {
     font-size: clamp(14px, 1vw, 14px) !important;
     color: #46C556;
-    text-align: right;
+    text-align: center;
     line-height: 1.2;
     font-family: var(--fonte-Poppins);
     font-weight: bold;
