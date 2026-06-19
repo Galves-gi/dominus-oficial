@@ -68,7 +68,7 @@ export const cardsData: Product[] = [
     }, {
         id: 7,
         image: "imagens-home/geisha-nanolote.avif",
-        title: "Geisha Nanolote - ",
+        title: "Mine Lab Nanolote - ",
         title_highlight: "86 pts",
         type: "Torrado e Moído",
         specification: "250g - R$49,90",
@@ -78,7 +78,7 @@ export const cardsData: Product[] = [
     {
         id: 8,
         image: "imagens-home/geisha-nanolote-grao.avif",
-        title: "Geisha Nanolote - ",
+        title: "Mine Lab Nanolote - ",
         title_highlight: "86 pts",
         type: "Torrado em Grãos",
         specification: "250g - R$49,90",
@@ -100,7 +100,7 @@ export const cardsData: Product[] = [
         title_highlight: "85 pts",
         type: "Torrado em Grãos",
         specification: "250g - R$44,90",
-        description: "Uma combinação indulgente de chocolate ao leite, caramelo e açúcar mascavo, que entrega ",
+        description: "Uma combinação perfeita de chocolate ao leite, caramelo e açúcar mascavo, que entrega ",
         description_highlight: "alta doçura, corpo cremoso e uma finalização suave e reconfortante.",
     }, {
         id: 11,
@@ -118,7 +118,7 @@ export const cardsData: Product[] = [
         title_highlight: "85 pts",
         type: "Torrado em Grãos",
         specification: "500g - 80,00",
-        description: "Uma combinação indulgente de chocolate ao leite, caramelo e açúcar mascavo, que entrega ",
+        description: "Uma combinação perfeita de chocolate ao leite, caramelo e açúcar mascavo, que entrega ",
         description_highlight: "alta doçura, corpo cremoso e uma finalização suave e reconfortante.",
     }, {
         id: 13,
@@ -159,7 +159,7 @@ export const cardsData: Product[] = [
         title_highlight: " Praticidade ",
         type: "Torrado e Moído",
         specification: "Caixa com 10 sachês - R$39,90",
-        description: "Café que unem praticidade e sabor, com notas de chocolate ao leite, frutas cítricas e baunilha, proporcionando uma experiência equilibrada e aromática ",
+        description: "Café que une praticidade e sabor, com notas de chocolate ao leite, frutas cítricas e baunilha, proporcionando uma experiência equilibrada e aromática ",
         description_highlight: "É só adicionar água quente e aproveitar."
 
     },
