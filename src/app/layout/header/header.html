@@ -1,0 +1,73 @@
+<header>
+    <div class="header__container">
+
+        <!-- Logo -->
+        <a routerLink="/"
+           aria-label="Ir para a página inicial da Dominus Cafés"
+           (click)="closeMenu(); scrollToTop()">
+            <img src="/logo.svg" alt="Logo Dominus Cafés" width="120" height="40">
+        </a>
+
+        <nav aria-label="Navegação principal">
+
+            <!-- Links principais -->
+            <ul id="menu-principal" class="links__navegar" [class.menu-open]="isMenuOpen()">
+                <li>
+                    <a routerLink="/" fragment="catalogo" (click)="closeMenu()">
+                        <img src="/icones/icone-header-xicara.svg" alt="" width="16" height="14">
+                        <span>Catálogo</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/sobre" (click)="closeMenu()">
+                        <img src="/icones/icone-header-caneta.svg" alt="" width="33" height="14">
+                        <span>Sobre nós</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Redes sociais -->
+            <ul class="redes__sociais" aria-label="Redes sociais da Dominus Cafés">
+                <li>
+                    <a href="https://www.facebook.com/share/1BE3Cu4C9G/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Conta no Facebook da Dominus Cafés (abre em nova aba)">
+                        <img src="/icones/icone-facebook.svg" alt="" width="28" height="28">
+                        <span>Dominus Cafés</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/dominuscafes/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Perfil da Dominus Cafés no Instagram (abre em nova aba)">
+                        <img src="/icones/icone-inst.svg" alt="" width="28" height="28">
+                        <span>dominuscafes</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Botão mobile -->
+            <button type="button"
+                    class="botao_menu icone_menu"
+                    [class.menu-fechar]="isMenuOpen()"
+                    [class.menu-abrir]="!isMenuOpen()"
+                    [attr.aria-expanded]="isMenuOpen()"
+                    [attr.aria-label]="isMenuOpen() ? 'Fechar menu de navegação' : 'Abrir menu de navegação'"
+                    aria-controls="menu-principal"
+                    (click)="toggleMenu()">
+                <span class="bar bar--1"></span>
+                <span class="bar bar--2"></span>
+                <span class="bar bar--3"></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- Sobreposição -->
+@if (isMenuOpen()) {
+    <div class="menu-sobreposicao" (click)="closeMenu()"></div>
+}

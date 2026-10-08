@@ -19,11 +19,12 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    scroll-padding-top: clamp(70px, 12vw, 90px);
 }
 
 body {
     overflow-x: hidden;
-    background-color: #EFECEA;
+    background-color: var(--cor-branco);
     padding-top: clamp(70px, 12vw, 90px);
 }
 

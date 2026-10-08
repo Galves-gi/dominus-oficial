@@ -1,15 +1,20 @@
-<section class="banner" aria-labelledby="banner-titulo">
+<section class="banner">
     <div class="banner__container">
 
-        <!-- IMAGEM -->
+        <!-- Imagem -->
         <picture class="banner__imagem">
-            <source media="(max-width: 569px)" srcset="imagens-home/banner-mobile.avif">
-            <img src="imagens-home/desktop.avif"
-                alt="Cida e Romildo em ambiente natural relacionado à educação e meio ambiente" width="500" height="400"
-                loading="eager" fetchpriority="high">
+            <source media="(max-width: 569px)" srcset="/imagens-home/banner-mobile.avif" type="image/avif">
+            <img ngSrc="/imagens-home/desktop.avif"
+                 alt="Empresários Cida e Romildo."
+                 width="500"
+                 height="400"
+                 priority>
         </picture>
 
-        <a href="/sobre" class="banner__botao" aria-label="Saiba mais sobre a história da Cida e Romildo">
+        <!-- Botão -->
+        <a class="banner__botao"
+           routerLink="/sobre"
+           aria-label="Saiba mais sobre a história da Cida e Romildo">
             Saiba Mais
         </a>
     </div>

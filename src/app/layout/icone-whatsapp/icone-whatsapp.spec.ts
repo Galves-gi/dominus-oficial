@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CardProductHome } from './card-product-home';
+import { IconeWhatsapp } from './icone-whatsapp';
 
-describe('CardProductHome', () => {
-  let component: CardProductHome;
-  let fixture: ComponentFixture<CardProductHome>;
+describe('IconeWhatsapp', () => {
+  let component: IconeWhatsapp;
+  let fixture: ComponentFixture<IconeWhatsapp>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardProductHome],
+      imports: [IconeWhatsapp],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CardProductHome);
+    fixture = TestBed.createComponent(IconeWhatsapp);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,15 +1,24 @@
-import { Component, computed, input } from '@angular/core';
-import { Product } from '../../../core/models/card-product-home';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { generateWhatsAppLink } from '../../../core/helpers/whatsapp.helper';
+import { Product } from '../../../core/model/card-product-home';
+
+let nextId = 0;
 
 @Component({
-  selector: 'app-card-product-home',
   imports: [],
-  templateUrl: './card-product-home.html',
+  selector: 'app-card-product-home',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './card-product-home.css',
+  templateUrl: './card-product-home.html',
 })
 export class CardProductHome {
-  
-  product = input<Product>()
-  link = computed(() => generateWhatsAppLink(this.product()));
+  readonly product = input.required<Product>();
+
+  protected readonly titleId = `card-produto-titulo-${nextId++}`;
+
+  protected readonly link = computed(() => generateWhatsAppLink(this.product()));
+
+  protected readonly ariaLabel = computed(
+    () => `Comprar café ${this.product().title} ${this.product().specification} pelo WhatsApp`,
+  );
 }

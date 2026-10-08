@@ -1,6 +1,8 @@
 /* Função para gerar automaticamente encode do link dos cards produtos */
 
-export function generateWhatsAppLink(product: any): string {
+import { Product } from "../model/card-product-home";
+
+export function generateWhatsAppLink(product: Product): string {
   const baseUrl = 'https://wa.me/5531984504703';
 
   const nomeCafe = product.title.replace('-', '').trim();

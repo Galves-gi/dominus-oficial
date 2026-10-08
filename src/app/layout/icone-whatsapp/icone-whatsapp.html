@@ -1,0 +1,18 @@
+<a class="whatsapp"
+   [class.whatsapp--open]="isOpen()"
+   [href]="whatsAppLink"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contato via WhatsApp"
+   (click)="toggleWhatsApp()">
+
+    <span class="whatsapp__trigger">
+        <img class="whatsapp__icon" src="/icones/whatsapp.svg" alt="" width="60" height="60">
+    </span>
+
+    <span class="whatsapp__box" aria-hidden="true">
+        <span class="whatsapp__text">
+            Quer falar no<br><strong>WhatsApp</strong>?
+        </span>
+    </span>
+</a>
