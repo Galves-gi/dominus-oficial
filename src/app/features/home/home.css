@@ -1,0 +1,68 @@
+main {
+    min-height: 100vh;
+}
+
+/* ===== Mobile ===== */
+h1 {
+    font-family: var(--fonte-Poppins);
+    font-weight: var(--fonte-bold);
+    color: var(--cor-azul);
+    text-align: center;
+    font-size: clamp(20px, 5vw, 28px);
+    margin: 2.3em 0;
+}
+
+/* Substitui o <br> do HTML, com o mesmo resultado visual */
+h1 .destaque--bege {
+    display: block;
+}
+
+.container__cards-produtos {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    gap: clamp(30px, 6vw, 70px);
+
+    padding: 0 1rem 3rem;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: 750px) {
+    .container__cards-produtos {
+        grid-template-columns: repeat(2, minmax(220px, clamp(350px, 30vw, 495px)));
+    }
+
+    /* Card CaféLab: ocupa a linha inteira */
+    .container__cards-produtos>.cafelab {
+        display: block;
+        width: 100%;
+        max-width: 960px;
+        grid-column: 1 / -1;
+    }
+
+    .cafelab ::ng-deep .card-produto {
+        width: 100%;
+        max-width: none;
+    }
+
+    .cafelab ::ng-deep .card-produto__conteudo,
+    .cafelab ::ng-deep .container__texto,
+    .cafelab ::ng-deep .botao__comprar {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+
+    app-card-product-home.cafelab ::ng-deep .card-produto__imagem img {
+        width: 100%;
+        max-width: 1043px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}

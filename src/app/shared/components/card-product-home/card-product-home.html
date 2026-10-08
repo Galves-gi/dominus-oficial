@@ -1,50 +1,40 @@
-<article class="card-produto" aria-labelledby="ARIA-titulo">
-    <div>
-        <!-- imagem -->
-        <figure>
-            <img [src]="product()?.image" [alt]="product()?.title" width="300" height="300">
+<article class="card-produto" [attr.aria-labelledby]="titleId">
+    <div class="card-produto__conteudo">
+
+        <!-- Imagem -->
+        <figure class="card-produto__imagem">
+            <img [src]="product().image" [alt]="product().title" width="300" height="300" decoding="async">
         </figure>
 
-        <!-- texto -->
+        <!-- Texto -->
         <div class="container__texto">
 
             <!-- Título -->
-            <h2 id="ARIA-titulo">
-                {{ product()?.title }}
-
-                <!-- Destaque título -->
-                <span class="destaque">
-                    {{ product()?.title_highlight }}
-                </span><br>
-
-                {{ product()?.type }}
+            <h2 [id]="titleId">
+                {{ product().title }}
+                <span class="destaque">{{ product().title_highlight }}</span>
+                <span class="tipo">{{ product().type }}</span>
             </h2>
 
             <!-- Peso / Especificação -->
-            <h3 class="destaque--bege">
-                {{ product()?.specification }}
-            </h3>
+            <h3 class="destaque--bege">{{ product().specification }}</h3>
 
             <!-- Descrição -->
             <p>
-                {{ product()?.description }}
-
-                <!-- Destaque Descrição -->
-                <span>
-                    {{ product()?.description_highlight }}
-                </span>
-
+                {{ product().description }}
+                <span>{{ product().description_highlight }}</span>
             </p>
         </div>
     </div>
 
-    <!-- BOTÃO COMPRAR -->
-    <a [href]="link()" target="_blank" class="botao__comprar" aria-label="Comprar café Arara 500g pelo WhatsApp">
-        <img src="icones/zap-card-produto.svg" alt="ícone do WhatsApp" aria-hidden="true" width="25" height="25">
-
-        <span>{{ product()?.botao  || "COMPRAR AGORA"}}</span>
-
-        <img src="icones/seta-card-produto.svg" alt="ícone de seta apontada para o lado direto" aria-hidden="true" width="28" height="16">
+    <!-- Botão comprar -->
+    <a class="botao__comprar"
+       [href]="link()"
+       [attr.aria-label]="ariaLabel()"
+       target="_blank"
+       rel="noopener noreferrer">
+        <img src="/icones/zap-card-produto.svg" alt="" width="25" height="25">
+        <span>{{ product().botao || 'COMPRAR AGORA' }}</span>
+        <img src="/icones/seta-card-produto.svg" alt="" width="28" height="16">
     </a>
-
 </article>
