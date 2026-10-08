@@ -1,74 +1,74 @@
-import { Product } from "../../core/model/card-product-home";
+import { Product } from "../../core/model/card-product-home.model";
 
 
 export const cardsData: Product[] = [
     {
         id: 1,
-        image: "imagens-home/arara-campeao-250.avif",
+        image: "/imagens-home/arara-campeao-250.avif",
         title: "Café Arara Campeão -",
         title_highlight: " 86,75 pts ",
         type: "Torrado e Moído",
-        specification: "250g - 49,90",
+        specification: "250g - R$49,90",
         description: "Um café com notas de chocolate, panetone, brownie, baunilha e caramelo com toques cítricos, resultando em uma bebida equilibrada, doce e intensamente aromática. ",
         description_highlight: "Ideal para espresso e métodos filtrados.",
 
     },
     {
         id: 2,
-        image: "imagens-home/arara-500g.avif",
+        image: "/imagens-home/arara-500g.avif",
         title: "Café Arara Campeão - ",
         title_highlight: "86,75 pts",
         type: "Torrado em Grãos",
-        specification: "500g - 90,00",
+        specification: "500g - R$90,00",
         description: "Um café com notas de chocolate, panetone, brownie, baunilha e caramelo com toques cítricos, resultando em uma bebida equilibrada, doce e intensamente aromática.",
         description_highlight: "Versátil e marcante em espresso ou filtrados.",
     },
     {
         id: 3,
-        image: "imagens-home/arara-campeao-250.avif",
+        image: "/imagens-home/arara-campeao-250.avif",
         title: "Café Arara Campeão -",
         title_highlight: " 86,75 pts ",
         type: "Torrado em Grãos",
-        specification: "500g - 90,00",
+        specification: "500g - R$90,00",
         description: "Um café com notas de chocolate, panetone, brownie, baunilha e caramelo com toques cítricos, resultando em uma bebida equilibrada, doce e intensamente aromática. ",
         description_highlight: "Ideal para espresso e métodos filtrados.",
 
     },
     {
         id: 4,
-        image: "imagens-home/arara-500g.avif",
+        image: "/imagens-home/arara-500g.avif",
         title: "Café Arara Campeão - ",
         title_highlight: "86,75 pts",
         type: "Torrado e Moído",
-        specification: "250g - 49,90",
+        specification: "250g - R$49,90",
         description: "Um café com notas de chocolate, panetone, brownie, baunilha e caramelo com toques cítricos, resultando em uma bebida equilibrada, doce e intensamente aromática.",
         description_highlight: "Versátil e marcante em espresso ou filtrados.",
 
     },
     {
         id: 5,
-        image: "imagens-home/arara-moca.avif",
+        image: "/imagens-home/arara-moca.avif",
         title: "Arara Moca -",
         title_highlight: " 85 pts ",
         type: "Torrado em Grãos",
-        specification: "250g - 44,90",
+        specification: "250g - R$44,90",
         description: "Um café elegante e equilibrado, com notas de chocolate, brownie, caramelo e frutas cítricas, envolvidas por um delicado aroma floral.",
         description_highlight: " Uma experiência refinada em cada preparo.",
 
     },
     {
         id: 6,
-        image: "imagens-home/arara-moca-moido.avif",
+        image: "/imagens-home/arara-moca-moido.avif",
         title: "Arara Moca -",
         title_highlight: " 85 pts",
         type: "Torrado e Moído",
-        specification: "250g - 44,90",
+        specification: "250g - R$44,90",
         description: "Um café elegante e equilibrado, com notas de chocolate, brownie, caramelo e frutas cítricas, envolvidas por um delicado aroma floral.",
         description_highlight: " Uma experiência refinada em cada preparo.",
 
     }, {
         id: 7,
-        image: "imagens-home/geisha-nanolote.avif",
+        image: "/imagens-home/geisha-nanolote.avif",
         title: "Mine Lab Nanolote - ",
         title_highlight: "86 pts",
         type: "Torrado e Moído",
@@ -78,7 +78,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 8,
-        image: "imagens-home/geisha-nanolote-grao.avif",
+        image: "/imagens-home/geisha-nanolote-grao.avif",
         title: "Mine Lab Nanolote - ",
         title_highlight: "86 pts",
         type: "Torrado em Grãos",
@@ -87,7 +87,7 @@ export const cardsData: Product[] = [
         description_highlight: "bebida limpa e delicada, com doçura natural, acidez suave e um corpo macio, denso e perfeitamente equilibrado.",
     }, {
         id: 9,
-        image: "imagens-home/chocomilk.avif",
+        image: "/imagens-home/chocomilk.avif",
         title: "Chocomilk - ",
         title_highlight: "85 pts",
         type: "Torrado e Moído",
@@ -96,7 +96,7 @@ export const cardsData: Product[] = [
         description_highlight: "bebida de alta doçura, com corpo cremoso e final envolvente. ",
     }, {
         id: 10,
-        image: "imagens-home/chocomilk.avif",
+        image: "/imagens-home/chocomilk.avif",
         title: "Chocomilk - ",
         title_highlight: "85 pts",
         type: "Torrado em Grãos",
@@ -105,49 +105,49 @@ export const cardsData: Product[] = [
         description_highlight: "alta doçura, corpo cremoso e uma finalização suave e reconfortante.",
     }, {
         id: 11,
-        image: "imagens-home/chocomilk-500g.avif",
+        image: "/imagens-home/chocomilk-500g.avif",
         title: "Chocomilk - ",
         title_highlight: "85 pts",
         type: "Torrado e Moído",
-        specification: "500g - 80,00",
+        specification: "500g - R$80,00",
         description: "Notas marcantes de chocolate ao leite, caramelo e açúcar mascavo, resultando em uma ",
         description_highlight: "bebida de alta doçura, com corpo cremoso e final envolvente. ",
-    },{
+    }, {
         id: 12,
-        image: "imagens-home/chocomilk-500g.avif",
+        image: "/imagens-home/chocomilk-500g.avif",
         title: "Chocomilk - ",
         title_highlight: "85 pts",
         type: "Torrado em Grãos",
-        specification: "500g - 80,00",
+        specification: "500g - R$80,00",
         description: "Uma combinação perfeita de chocolate ao leite, caramelo e açúcar mascavo, que entrega ",
         description_highlight: "alta doçura, corpo cremoso e uma finalização suave e reconfortante.",
     }, {
         id: 13,
-        image: "imagens-home/fruit-catucai.avif",
+        image: "/imagens-home/fruit-catucai.avif",
         title: "Fruit Catucaí 2SL",
         title_highlight: "Torrado em Grãos",
         type: "",
-        specification: "250g - 44,90",
+        specification: "250g - R$44,90",
         description: "Um café com doçura equilibrada, que combina notas de caramelo e doce de leite com o frescor de frutas maduras. ",
         description_highlight: "Um sabor marcante para quem valoriza qualidade em cada preparo.",
 
     },
     {
         id: 14,
-        image: "imagens-home/fruit-catucai-moido.avif",
+        image: "/imagens-home/fruit-catucai-moido.avif",
         title: "Fruit Catucaí 2SL",
         title_highlight: "Torrado e Moído",
         type: "",
-        specification: "250g - 44,90",
+        specification: "250g - R$44,90",
         description: "Um café com doçura equilibrada, que combina notas de caramelo e doce de leite com o frescor de frutas maduras. ",
         description_highlight: "Um sabor marcante para quem valoriza qualidade em cada preparo.",
 
     }, {
         id: 15,
-        image: "imagens-home/arara-lata.avif",
+        image: "/imagens-home/arara-lata.avif",
         title: "Café Arara Campeão -",
         title_highlight: " 86,75 pts",
-        type: "torrado em Grãos, Tubolata",
+        type: "Torrado em Grãos, Tubolata",
         specification: "250g - R$55,00",
         description: "Notas de chocolate, panetone, brownie, baunilha, caramelo e frutas cítricas. Bebida equilibrada, adocicada e aromática. ",
         description_highlight: "Embalagem premium, ideal para presentes e revenda.",
@@ -155,7 +155,7 @@ export const cardsData: Product[] = [
     },
     {
         id: 16,
-        image: "imagens-home/dripp-coffee.avif",
+        image: "/imagens-home/dripp-coffee.avif",
         title: "Dripp Coffee -",
         title_highlight: " Praticidade ",
         type: "Torrado e Moído",
@@ -166,3 +166,16 @@ export const cardsData: Product[] = [
     },
 
 ]
+
+export const cafelab: Product = {
+    id: 17,
+    image: '/imagens-home/cafelab.avif',
+    title: 'CAFÉ LAB: Pra se encantar, é só começar!',
+    title_highlight: '',
+    type: '',
+    specification: 'a partir de R$50,00',
+    description:
+        'Vivência sensorial e educativa, com ênfase na cultura do café especial, na sustentabilidade e na agroecologia. Duração: 03h Agendamento pelo whatsapp.',
+    description_highlight: '',
+    botao: 'QUERO SABER MAIS',
+};

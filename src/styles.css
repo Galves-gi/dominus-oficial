@@ -1,3 +1,24 @@
+:root {
+    --fonte-Poppins: "Poppins", sans-serif;
+    --fonte-Raleway: "Raleway", sans-serif;
+    --fonte-Satisfy: "Satisfy", cursive;
+
+    --fonte-bold: 700;
+    --fonte-medio: 500;
+    --fonte-regular: 400;
+
+    --cor-azul: #265289;
+    --cor-bege: #C3924D;
+    --cor-branco: #EFECEA;
+    --altura-header: clamp(70px, 12vw, 90px);
+}
+
+@media (min-width: 720px) {
+    :root {
+        --altura-header: calc(clamp(86.3px, 10vw, 158px) + clamp(6px, 1.5vw, 10px));
+    }
+}
+
 /* ===== Reset básico ===== */
 
 *,
@@ -19,19 +40,13 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    scroll-padding-top: clamp(70px, 12vw, 90px);
+    scroll-padding-top: var(--altura-header);
 }
 
 body {
     overflow-x: hidden;
     background-color: var(--cor-branco);
-    padding-top: clamp(70px, 12vw, 90px);
-}
-
-@media (min-width: 720px) {
-    body {
-        padding-top: clamp(86.3px, 10vw, 158px);
-    }
+    padding-top: var(--altura-header);
 }
 
 
@@ -95,19 +110,6 @@ h6 {
 }
 
 /* style global */
-:root {
-    --fonte-Poppins: "Poppins", sans-serif;
-    --fonte-Raleway: "Raleway", sans-serif;
-    --fonte-Satisfy: "Satisfy", cursive;
-
-    --fonte-bold: 700;
-    --fonte-medio: 500;
-    --fonte-regular: 400;
-
-    --cor-azul: #265289;
-    --cor-bege: #C3924D;
-    --cor-branco: #EFECEA;
-}
 
 /*  ACESSIBILIDADE: invisível visualmente
     visível para leitor de tela */

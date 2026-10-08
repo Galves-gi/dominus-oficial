@@ -2,8 +2,8 @@
     <app-banner />
 
     <h1 id="catalogo">
-        Conheça Nosso Catálogo de
-        <span class="destaque--bege">Cafés Especiais:</span>
+        {{ content.h1.prefix }}
+        <span class="destaque--bege">{{ content.h1.highlight }}</span>
     </h1>
 
     <section class="container__cards-produtos" aria-labelledby="catalogo">

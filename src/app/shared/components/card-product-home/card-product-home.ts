@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { generateWhatsAppLink } from '../../../core/helpers/whatsapp.helper';
-import { Product } from '../../../core/model/card-product-home';
+import { Product } from '../../../core/model/card-product-home.model';
 
 let nextId = 0;
 

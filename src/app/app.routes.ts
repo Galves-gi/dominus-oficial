@@ -1,25 +1,29 @@
 import { Routes } from '@angular/router';
 import { SeoData } from './core/model/seo.model';
+import { buildHomeJsonLd, organizationJsonLd } from './core/seo/json-ld';
+import { HOME_CONTENT } from './features/home/home.content';
+import { cardsData } from './features/home/data';
+import { ABOUT_CONTENT } from './features/about/about.content';
 
 const seo = (d: SeoData) => ({ seo: d });
 
 export const routes: Routes = [
-      {
+  {
     path: '',
     loadComponent: () => import('./features/home/home').then(m => m.Home),
     data: seo({
-      title: 'Cafés Especiais',
-      description: 'Cafés especiais selecionados, torrados com qualidade e entregues na sua casa.',
+      ...HOME_CONTENT.seo,
       path: '/',
+      jsonLd: buildHomeJsonLd(cardsData),
     }),
   },
   {
     path: 'sobre',
     loadComponent: () => import('./features/about/about').then(m => m.About),
     data: seo({
-      title: 'Sobre Nós',
-      description: 'Conheça a história da Dominus Cafés e nossa paixão por cafés especiais.',
+      ...ABOUT_CONTENT.seo,
       path: '/sobre',
+      jsonLd: organizationJsonLd,  
     }),
   },
   { path: '**', redirectTo: '' },

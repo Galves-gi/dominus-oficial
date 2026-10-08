@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { HOME_CONTENT } from '../../../features/home/home.content';
 
 @Component({
   selector: 'app-banner',
@@ -9,4 +10,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './banner.css',
   templateUrl: './banner.html',
 })
-export class Banner {}
+export class Banner {
+  protected readonly content = HOME_CONTENT;
+}

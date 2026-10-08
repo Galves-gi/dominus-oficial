@@ -5,7 +5,7 @@
         <picture class="banner__imagem">
             <source media="(max-width: 569px)" srcset="/imagens-home/banner-mobile.avif" type="image/avif">
             <img ngSrc="/imagens-home/desktop.avif"
-                 alt="Empresários Cida e Romildo."
+                 alt="{{ content.banner.alt }}"
                  width="500"
                  height="400"
                  priority>
@@ -14,8 +14,8 @@
         <!-- Botão -->
         <a class="banner__botao"
            routerLink="/sobre"
-           aria-label="Saiba mais sobre a história da Cida e Romildo">
-            Saiba Mais
+           aria-label="{{ content.banner.ctaAriaLabel }}">
+            {{ content.banner.cta }}
         </a>
     </div>
 </section>

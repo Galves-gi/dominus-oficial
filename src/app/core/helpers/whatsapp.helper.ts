@@ -1,6 +1,6 @@
 /* Função para gerar automaticamente encode do link dos cards produtos */
 
-import { Product } from "../model/card-product-home";
+import { Product } from "../model/card-product-home.model";
 
 export function generateWhatsAppLink(product: Product): string {
   const baseUrl = 'https://wa.me/5531984504703';
